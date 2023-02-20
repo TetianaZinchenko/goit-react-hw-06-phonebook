@@ -28,7 +28,7 @@ export default function App({ title }) {
             <ContactList />
           </>
         ) : (
-          <p>You haven't any contacts yet!</p>
+          <div style={{ color: 'red', fontSize: '20px' }}>No any contacts!</div>
         )}
       </Section>
       <ToastContainer autoClose={3000} theme={'colored'} />

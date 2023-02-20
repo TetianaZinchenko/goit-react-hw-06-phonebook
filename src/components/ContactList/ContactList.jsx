@@ -3,8 +3,6 @@ import { getContacts, getFilter } from 'redux/selectors';
 
 import { Contacts } from './ContactList.styled';
 import ContactListItem from 'components/ContactListItem';
-import Notification from 'components/Notification/Notification';
-// import { Notification } from 'components/Notification/Notification';
 
 const getFilteredContacts = (contacts, filter) =>
   contacts.filter(({ name }) =>
@@ -24,7 +22,9 @@ export default function ContactList() {
           <ContactListItem key={contact.id} contact={contact} />
         ))
       ) : (
-        <Notification />
+        <div style={{ color: 'red', fontSize: '20px' }}>
+          There are no contacts yet!
+        </div>
       )}
     </Contacts>
   );
